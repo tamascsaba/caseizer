@@ -13,22 +13,12 @@
       <section class="columns">
         <div class="field column">
           <label class="label">Position X</label>
-          <input class="slider is-fullwidth is-success" formControlName="positionX" max="100" min="0" step="1"
+          <input class="slider is-fullwidth is-success" formControlName="positionX" max="336" min="20" step="1"
                  type="range">
         </div>
         <div class="field column">
           <label class="label">Position Y</label>
-          <input class="slider is-fullwidth is-success" formControlName="positionY" max="100" min="0" step="1"
-                 type="range">
-        </div>
-      </section>
-      <section class="columns">
-        <div class="field column"><label class="label">Width</label>
-          <input class="slider is-fullwidth is-warning" formControlName="width" max="100" min="0" step="1"
-                 type="range">
-        </div>
-        <div class="field column"><label class="label">Height</label>
-          <input class="slider is-fullwidth is-warning" formControlName="height" max="100" min="0" step="1"
+          <input class="slider is-fullwidth is-success" formControlName="positionY" max="610" min="20" step="1"
                  type="range">
         </div>
       </section>
@@ -41,26 +31,18 @@
                  type="range">
         </div>
       </section>
+
       <section class="columns">
-        <div class="field column"><label class="label">Horizontal Align</label>
-          <div class="select is-info">
-            <select>
-              <option value="left">Left</option>
-              <option value="center">Center</option>
-              <option value="right">Right</option>
-            </select>
-          </div>
+        <div class="field column">
+          <label class="label">Background Color</label>
+          <input formControlName="backgroundColor" type="color">
         </div>
-        <div class="field column"><label class="label">Vertical Align</label>
-          <div class="select is-info">
-            <select>
-              <option value="left">Top</option>
-              <option value="center">Middle</option>
-              <option value="right">Button</option>
-            </select>
-          </div>
+        <div class="field column">
+          <label class="label">Text Color</label>
+          <input formControlName="textColor" type="color">
         </div>
       </section>
+
     </section>
   </section>
 </form>

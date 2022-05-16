@@ -1,7 +1,7 @@
 <div class="container mb-25">
   <section class="section columns">
     <div class="column">
-      <canvas class="case-editor-canvas" height="720" width="800"></canvas>
+      <ngx-canvas [options]="(canvasOptions | async)!"></ngx-canvas>
     </div>
     <div class="column">
       <app-case-settings></app-case-settings>
