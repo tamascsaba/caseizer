@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from '@app/app.module';
 
 import { CaseSettingsComponent } from './case-settings.component';
 
@@ -8,9 +9,9 @@ describe('CaseSettingsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CaseSettingsComponent ]
-    })
-    .compileComponents();
+      declarations: [CaseSettingsComponent],
+      imports: [AppModule]
+    }).compileComponents();
   });
 
   beforeEach(() => {

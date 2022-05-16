@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from '@app/app.module';
 
 import { CaseEditorComponent } from './case-editor.component';
 
@@ -8,9 +9,9 @@ describe('CaseEditorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CaseEditorComponent ]
-    })
-    .compileComponents();
+      declarations: [CaseEditorComponent],
+      imports: [AppModule]
+    }).compileComponents();
   });
 
   beforeEach(() => {

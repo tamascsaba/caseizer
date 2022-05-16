@@ -1,3 +1,4 @@
+import { AppModule } from '@app/app.module';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 
 import { AppComponent } from './app.component';
@@ -6,7 +7,8 @@ describe('AppComponent', () => {
   let spectator: Spectator<AppComponent>;
 
   const createComponent = createComponentFactory({
-    component: AppComponent
+    component: AppComponent,
+    imports: [AppModule]
   });
 
   beforeEach(() => {

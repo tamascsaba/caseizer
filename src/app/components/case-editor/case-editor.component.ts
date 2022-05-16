@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { phoneImage } from '@app/constants/phone-image.constant';
 import { phoneRect } from '@app/constants/phone-rect.constant';
 import { phoneText } from '@app/constants/phone-text.constant';
@@ -10,7 +10,8 @@ import { BehaviorSubject, distinctUntilChanged } from 'rxjs';
 @Component({
   selector: 'app-case-editor',
   templateUrl: './case-editor.component.html',
-  styleUrls: ['./case-editor.component.scss']
+  styleUrls: ['./case-editor.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CaseEditorComponent implements OnInit {
   public canvasOptions = new BehaviorSubject<DrawProps>(
