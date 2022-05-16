@@ -1,10 +1,13 @@
 <div class="container mb-25">
   <section class="section columns">
     <div class="column">
-      <ngx-canvas [options]="(canvasOptions | async)!"></ngx-canvas>
+      <ngx-canvas [options]="(canvasOptions | async)!" id="phone-case"></ngx-canvas>
     </div>
     <div class="column">
       <app-case-settings></app-case-settings>
+      <div class="buttons pt-5">
+        <button (click)="downloadCase()" class="button is-primary">Give me the case :)</button>
+      </div>
     </div>
   </section>
 </div>

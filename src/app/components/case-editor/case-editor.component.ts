@@ -25,6 +25,17 @@ export class CaseEditorComponent implements OnInit {
       .subscribe(this.setSettings);
   }
 
+  public downloadCase() {
+    const image = document
+      .querySelector<HTMLCanvasElement>('#phone-case canvas')
+      ?.toDataURL('image/png', 1)
+      ?.replace('image/png', 'image/octet-stream') as string;
+    const link = document.createElement('a');
+    link.download = 'my-case.png';
+    link.href = image;
+    link.click();
+  }
+
   private setSettings = (settings: TextSettings) => {
     const backgroundProps: RectProps = {
       ...phoneRect,
