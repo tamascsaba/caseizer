@@ -1,3 +1,12 @@
+.textarea {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.counter {
+  display: flex;
+  justify-content: end;
+}
+
 .slider-fields {
   .field {
     margin-top: 0;

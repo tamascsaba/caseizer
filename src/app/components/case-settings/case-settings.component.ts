@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CaseEditorService } from '@app/services/case-editor.service';
 
 @Component({
   selector: 'app-case-settings',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./case-settings.component.scss']
 })
 export class CaseSettingsComponent {
-  constructor() {}
+  public settingsFormGroup = this.caseEditorService.settings;
+
+  constructor(private readonly caseEditorService: CaseEditorService) {}
 }

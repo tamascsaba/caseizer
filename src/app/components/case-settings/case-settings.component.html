@@ -1,36 +1,44 @@
-<div class="column">
+<form [formGroup]="settingsFormGroup" class="column">
   <section>
     <section>
-      <div class="field"><label class="label">Text</label>
-        <div class="control is-clearfix">
-          <textarea class="textarea" maxlength="500" rows="1"></textarea>
-          <small class="help counter is-invisible"> 93 / 500</small>
+      <div class="field is-clearfix">
+        <label class="label">Text</label>
+        <div class="control">
+          <textarea #textAreaElement class="textarea" formControlName="text" maxlength="500" rows="1"></textarea>
+          <small class="help counter"> {{textAreaElement.value.length}} / 500</small>
         </div>
       </div>
     </section>
     <section class="slider-fields">
-      <div class="columns">
-        <div class="field column"><label class="label">Position X</label>
-          <input class="slider is-fullwidth is-success" max="100" min="0" step="1" type="range" value="50">
+      <section class="columns">
+        <div class="field column">
+          <label class="label">Position X</label>
+          <input class="slider is-fullwidth is-success" formControlName="positionX" max="100" min="0" step="1"
+                 type="range">
         </div>
-        <div class="field column"><label class="label">Position Y</label>
-          <input class="slider is-fullwidth is-success" max="100" min="0" step="1" type="range" value="50">
+        <div class="field column">
+          <label class="label">Position Y</label>
+          <input class="slider is-fullwidth is-success" formControlName="positionY" max="100" min="0" step="1"
+                 type="range">
         </div>
-      </div>
+      </section>
       <section class="columns">
         <div class="field column"><label class="label">Width</label>
-          <input class="slider is-fullwidth is-warning" max="100" min="0" step="1" type="range" value="50">
+          <input class="slider is-fullwidth is-warning" formControlName="width" max="100" min="0" step="1"
+                 type="range">
         </div>
         <div class="field column"><label class="label">Height</label>
-          <input class="slider is-fullwidth is-warning" max="100" min="0" step="1" type="range" value="50">
+          <input class="slider is-fullwidth is-warning" formControlName="height" max="100" min="0" step="1"
+                 type="range">
         </div>
       </section>
       <section class="columns">
         <div class="field column"><label class="label">Font Size</label>
-          <input class="slider is-fullwidth is-info" max="100" min="0" step="1" type="range" value="50">
+          <input class="slider is-fullwidth is-info" formControlName="fontSize" max="36" min="0" step="1" type="range">
         </div>
         <div class="field column"><label class="label">Line Height</label>
-          <input class="slider is-fullwidth is-info" max="100" min="0" step="1" type="range" value="50">
+          <input class="slider is-fullwidth is-info" formControlName="lineHeight" max="36" min="0" step="1"
+                 type="range">
         </div>
       </section>
       <section class="columns">
@@ -55,4 +63,4 @@
       </section>
     </section>
   </section>
-</div>
+</form>
